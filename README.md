@@ -44,12 +44,12 @@ SELECT * FROM INSCRITOS;
 --1) ¿Cuántos registros hay? 
 SELECT COUNT(*) FROM INSCRITOS;
  ```
- !(img/1.jpg)
+ ![](img/1.jpg)
 ```
 -- 2)¿Cuántos inscritos hay en total? 
 SELECT SUM(cantidad) FROM inscritos;
 ```
- !(img/2.jpg)
+ ![](img/2.jpg)
 ```
 --3)¿Cuál o cuáles son los registros de mayor antigüedad?
 SELECT * FROM inscritos WHERE fecha = (SELECT MAX(fecha) FROM inscritos);
