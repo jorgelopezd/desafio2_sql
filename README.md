@@ -54,35 +54,42 @@ SELECT SUM(cantidad) FROM inscritos;
 --3)¿Cuál o cuáles son los registros de mayor antigüedad?
 SELECT * FROM inscritos WHERE fecha = (SELECT MAX(fecha) FROM inscritos);
 ```
+![](img/3.jpg)
 ```
 --4)¿Cuántos inscritos hay por día?
 SELECT fecha, SUM(cantidad) FROM inscritos GROUP BY fecha;
 ```
+![](img/4.jpg)
 ```
 --5)¿Cuántos inscritos hay por fuente?
 SELECT fuente, SUM(cantidad) FROM inscritos GROUP BY fuente;
 ```
+![](img/5.jpg)
 ```
 --6) ¿Qué día se inscribió la mayor cantidad de personas? Y ¿Cuántas personas se inscribieron en ese día?
 SELECT fecha, SUM(cantidad) FROM inscritos GROUP BY fecha ORDER BY fecha DESC LIMIT 1;
 ```
+![](img/6.jpg)
 ```
 --7) ¿Qué días se inscribieron la mayor cantidad de personas utilizando el blog? ¿Cuántas personas fueron?
 SELECT fecha, SUM(cantidad) FROM inscritos WHERE fuente = 'Blog' GROUP BY fecha ORDER BY fecha DESC;
 ```
+![](img/7.jpg)
 ```
 --8)¿Cuál es el promedio de personas inscritas por día?
 SELECT fecha, AVG(cantidad) FROM inscritos GROUP BY fecha ORDER BY fecha DESC LIMIT 1;
 ```
+![](img/8.jpg)
 ```
 --9) ¿Qué días se inscribieron más de 50 personas?
 SELECT fecha, SUM(cantidad) FROM inscritos GROUP BY fecha HAVING SUM(cantidad) >= 50;
 ```
+![](img/9.jpg)
 ```
 --10) ¿Cuál es el promedio diario de personas inscritas a partir del tercer día en adelante, considerando únicamente las fechas posteriores o iguales a la indicada?
 SELECT fecha, AVG(cantidad) FROM inscritos WHERE fecha >= '01/03/2021' GROUP BY fecha ORDER BY fecha;
 ```
-
+![](img/10.jpg)
 
 
 
