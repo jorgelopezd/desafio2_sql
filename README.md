@@ -1,6 +1,4 @@
 ﻿# desafio2_sql
-
- ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](img/1.jpg)
  ```
 --Creacion de la tabla "inscritos"
 CREATE TABLE INSCRITOS(cantidad INT, fecha DATE, fuente VARCHAR);
@@ -41,11 +39,13 @@ VALUES ( 99, '01/08/2021', 'Página' );
 
 --verifico si se ingreso correctamente
 SELECT * FROM INSCRITOS;
-
+ ```
+ ```
 --1) ¿Cuántos registros hay? 
 SELECT COUNT(*) FROM INSCRITOS;
-
-
+ ```
+ ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](img/1.jpg)
+ ```
 -- 2)¿Cuántos inscritos hay en total? 
 SELECT SUM(cantidad) FROM inscritos;
 
